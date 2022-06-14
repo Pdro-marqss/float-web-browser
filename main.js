@@ -1,17 +1,23 @@
 const { app, BrowserWindow } = require('electron');
 
+let win; //serve para tornar o controle da window global, assim posso usar em novas funções
+
 function createWindow() {
     //Cria a janela do app
-    const win = new BrowserWindow({
+    win = new BrowserWindow({
         width: 800,
         height: 600,
+        // titleBarStyle: 'hidden',
+        autoHideMenuBar: true,
+        alwaysOnTop: true,
         webPreferences: {
             nodeIntegration: true
         }
     });
 
     //Carrega o index.html do app
-    win.loadFile('index.html');
+    // win.loadFile('index.html');
+    win.loadURL('https://www.google.com');
 
     //Habilita o DevTools
     win.webContents.openDevTools()
