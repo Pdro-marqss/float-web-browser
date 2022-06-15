@@ -7,9 +7,19 @@ function createWindow() {
     win = new BrowserWindow({
         width: 800,
         height: 600,
-        // titleBarStyle: 'hidden',
+        minWidth: 600,
+        minHeight: 400,
+        maxWidth: 1000,
+        maxHeight: 800,
+        x: 'right',
+        y: 'right',
+        // titleBarStyle: 'customButtonsOnHover',
+        // frame: false,
+        disableHtmlFullscreenWindowResize: true,
+        fullscreenable: false,
         autoHideMenuBar: true,
         alwaysOnTop: true,
+        darkTheme: true,
         webPreferences: {
             nodeIntegration: true
         }
@@ -17,7 +27,7 @@ function createWindow() {
 
     //Carrega o index.html do app
     // win.loadFile('index.html');
-    win.loadURL('https://www.google.com');
+    win.loadURL('https://www.youtube.com');
 
     //Habilita o DevTools
     win.webContents.openDevTools()
