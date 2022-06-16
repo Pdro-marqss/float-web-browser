@@ -27,7 +27,7 @@ function createWindow() {
 
     //Carrega o index.html do app
     // win.loadFile('index.html');
-    win.loadURL('https://www.youtube.com');
+    win.loadURL('https://www.op.gg');
 
     //Habilita o DevTools
     win.webContents.openDevTools()
